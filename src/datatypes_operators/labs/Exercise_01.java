@@ -17,9 +17,17 @@ public class Exercise_01 {
     public static void main(String[] args) {
 
         // write code here
+        int i;
+        double d;
+        char ch;
+
+        i = 1;
+        d = 2.0;
+        ch = 'c';
+
+        System.out.println(i + " is an integer");
+        System.out.println(d + " is a double");
+        System.out.println(ch + " is a character");
 
     }
 }
-
-
-

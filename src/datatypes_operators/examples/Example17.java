@@ -18,7 +18,7 @@ class CastDemo {
         b = (byte) i;
         System.out.println("Value of b: " + b);
 
-        i = 257;
+        i = 257; // 128
         b = (byte) i;
         System.out.println("Value of b: " + b);
 

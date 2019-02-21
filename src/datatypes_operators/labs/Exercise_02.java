@@ -24,6 +24,18 @@ public class Exercise_02 {
     public static void main(String[] args) {
 
         // write code here
+        //Widening conversion
+        int i;
+        i = 10;
+        double d = i;
+        System.out.println(d);
+
+        //Narrowing conversion
+        double newD = 10.5;
+        int newI = (int) newD;
+        System.out.println(newI);
+        System.out.println("Information was lost when a double was casted into an int");
+
 
     }
 }

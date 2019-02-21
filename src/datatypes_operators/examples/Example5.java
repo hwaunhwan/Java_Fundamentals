@@ -2,7 +2,7 @@ package datatypes_operators.examples;
 
 /*
    Compute the distance to a lightening
-   strke whose sound takes 7.2 seconds
+   strike whose sound takes 7.2 seconds
    to reach you.
 */
 class Sound {
