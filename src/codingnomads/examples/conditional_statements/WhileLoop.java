@@ -1,4 +1,4 @@
-package codingnomads.conditional_statements;
+package codingnomads.examples.conditional_statements;
 
 public class WhileLoop {
 
