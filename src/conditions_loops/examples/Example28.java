@@ -1,6 +1,7 @@
 package conditions_loops.examples;
 
 // Using break with a  label.
+// Q: How many labels? Any name?
 class Break4 {
     public static void main(String args[]) {
         int i;
