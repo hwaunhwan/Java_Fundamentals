@@ -11,7 +11,7 @@ Initializing git folder (Done)
         d. Commit file
         c. On Github, create new git_practice repository
         d. Push commit file to Github
-        e. Practice the following git flow until you feel comfortable:
+        e. codingnomads.examples.practice.Practice the following git flow until you feel comfortable:
             i.   Create or modify file
             ii.  Add file(s)
             iii. Commit file(s)
