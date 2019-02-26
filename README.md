@@ -1,4 +1,4 @@
-# CodingNomads Java Fundamentals Branch
+# CodingNomads Java Fundamentals
 
 This project contains a variety of textbook examples and labs focused on Java fundamentals.
 
