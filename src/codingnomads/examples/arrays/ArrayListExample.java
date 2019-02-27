@@ -33,6 +33,7 @@ public class ArrayListExample {
         System.out.println(lastIndexOfProgramming);
 
         System.out.println(arrayList);
+
     }
 
 }
