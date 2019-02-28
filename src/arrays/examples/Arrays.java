@@ -30,6 +30,6 @@ class Arrays {
                 max = nums[i];
         }
         // print out min and max
-        System.out.println("min and max: " + min + " " + max);
+        System.out.println("min = "  + min + ", and max = " + max);
     }
 }

@@ -15,9 +15,9 @@ class Bubble {
 
         // display original array
         System.out.print("Original array is:");
-        for(int i=0; i < str.length; i++)
+        for(int i=0; i < str.length; i++) {
             System.out.print(" " + str[i]);
-
+        }
         System.out.println();
 
         // This is the bubble sort.
@@ -37,9 +37,10 @@ class Bubble {
 
 
         // display sorted array
-//        System.out.print("Sorted array is:");
-//        for(int i=0; i < str.length; i++)
-//            System.out.print(" " + str[i]);
-//        System.out.println();
+        System.out.print("Sorted array is:");
+        for(i=0; i < str.length; i++) {
+            System.out.print(" " + str[i]);
+        }
+        System.out.println();
     }
 }

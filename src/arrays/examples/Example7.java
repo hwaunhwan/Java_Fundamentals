@@ -30,7 +30,7 @@ class Ragged {
             System.out.println();
         }
         System.out.println();
-
+        // Can't show everything with one loop because the size is different in the second dimension
         System.out.println("Riders per trip on the weekend:");
         for(i=5; i < 7; i++) {
             for(j=0; j < 2; j++)

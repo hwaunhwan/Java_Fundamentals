@@ -14,9 +14,12 @@ class ForEach {
             if (x == 5){
                 nums[x-1] = 10;
             }
+            sum += x;
             count++;
+
         }
 
         System.out.println("Summation: " + sum);
+
     }
 }

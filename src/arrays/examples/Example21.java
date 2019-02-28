@@ -5,7 +5,7 @@ package arrays.examples;
 class StringSwitch {
     public static void main(String args[]) {
 
-        String command = "cancel";
+        String command = "Cancel";
 
         switch(command.toLowerCase()) {
             case "connect":

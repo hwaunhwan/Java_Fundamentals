@@ -15,7 +15,8 @@ class Search {
             }
         }
 
-        if(found)
-            System.out.println("Value found!");
+        if(found) {
+            System.out.println("Value found! " + val);
+        }
     }
 }

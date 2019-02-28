@@ -11,7 +11,7 @@ class UpCase {
 
             // This statement turns off the 6th bit.
             ch = (char) ((int) ch & 65503); // ch is now uppercase
-
+            //1111111111011111
             System.out.print(ch + " ");
         }
     }
