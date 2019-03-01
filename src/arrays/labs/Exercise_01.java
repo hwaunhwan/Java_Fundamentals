@@ -1,5 +1,7 @@
 package arrays.labs;
 
+import java.util.Scanner;
+
 /**
  * Arrays calculator
  *
@@ -11,5 +13,15 @@ package arrays.labs;
  */
 
 public class Exercise_01 {
-
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int[] nums = new int[10];
+        System.out.println("Enter 10 numbers (Please press enter after each number):");
+        for(int i=0;i<10;i++) {
+            nums[i] = scan.nextInt();
+        }
+        for(int num : nums){
+            System.out.println(num);
+        }
+    }
 }
