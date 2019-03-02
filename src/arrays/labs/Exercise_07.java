@@ -48,6 +48,7 @@ public class Exercise_07 {
         size = nums.size();
         System.out.println();
         System.out.println("New Size: " + size);
+
     }
 
 }
