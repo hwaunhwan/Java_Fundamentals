@@ -20,5 +20,20 @@ public class Exercise_03 {
     public static void main(String[] args) {
 
         int[][] twoDArray = new int[5][5];
+        int order = 1;
+        for(int i = 0; i < twoDArray.length; i++){
+            for(int j = 0; j < twoDArray[i].length; j++){
+                twoDArray[i][j] = 3 * order;
+                order++;
+            }
+            System.out.println();
+        }
+
+        for(int i = 0; i < twoDArray.length; i++){
+            for(int j = 0; j < twoDArray[i].length; j++){
+                System.out.print(twoDArray[i][j] + "\t");
+            }
+            System.out.println();
+        }
     }
 }
