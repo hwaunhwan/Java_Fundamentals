@@ -26,7 +26,6 @@ public class Exercise_03 {
                 twoDArray[i][j] = 3 * order;
                 order++;
             }
-            System.out.println();
         }
 
         for(int i = 0; i < twoDArray.length; i++){
