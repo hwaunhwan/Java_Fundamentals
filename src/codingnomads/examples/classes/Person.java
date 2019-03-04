@@ -1,6 +1,6 @@
 package codingnomads.examples.classes;
 
-
+// POJO :  Plain Old Java Object
 // classes starts with capital letter
 public class Person {
 
