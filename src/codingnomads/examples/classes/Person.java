@@ -21,8 +21,8 @@ public class Person {
     }
 
     //overloading to make PersonController class to work
-    public Person(){}
     //This is called default constructor
+    public Person(){}
 
     // methods
     // ...
