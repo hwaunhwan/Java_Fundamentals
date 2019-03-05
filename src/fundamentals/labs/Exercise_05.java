@@ -19,13 +19,14 @@ public class Exercise_05 {
         // create scanner
         Scanner scanner = new Scanner(System.in);
         // prompt user
-        System.out.print("Enter a number in days between 1 and 1,000,000,000: ");
+        System.out.print("Enter a number in days between 1 and 1,000,000: ");
         // assign input to variable as int
         int days = scanner.nextInt();
 
         // write completed code here
         long seconds;
         seconds = days * 24l * 60l * 60l;
+
 
         System.out.println(days + " day(s) = " + seconds + " seconds");
 
