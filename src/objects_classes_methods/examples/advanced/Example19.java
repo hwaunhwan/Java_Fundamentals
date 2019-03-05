@@ -10,7 +10,7 @@ class StaticBlock {
         rootOf2 = Math.sqrt(2.0);
         rootOf3 = Math.sqrt(3.0);
     }
-
+    //StaticBloc(){}
     StaticBlock(String msg) {
         System.out.println(msg);
     }

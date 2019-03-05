@@ -1,7 +1,8 @@
 package objects_classes_methods.examples.advanced;
 
 // Return a programmer-defined object.
-class Err {
+class
+Err {
     String msg; // error message
     int severity; // code indicating severity of error
 

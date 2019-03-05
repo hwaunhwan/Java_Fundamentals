@@ -37,8 +37,10 @@ class AddMeth {
         minivan.accelerate(20);
 
         //print speed()
+        System.out.println(minivan.speed);
 
         int range = minivan.range();
+
 
         // assign values to fields in sportscar
         sportscar.passengers = 2;
@@ -49,11 +51,13 @@ class AddMeth {
         System.out.print("Minivan can carry " + minivan.passengers +
                 ". ");
 
-        minivan.range(); // display range of minivan
+        range1 = minivan.range(); // display range of minivan
+        System.out.println(range1);
 
         System.out.print("Sportscar can carry " + sportscar.passengers +
                 ". ");
 
-        sportscar.range(); // display range of sportscar.
+        range2 = sportscar.range(); // display range of sportscar.
+        System.out.println(range2);
     }
 }

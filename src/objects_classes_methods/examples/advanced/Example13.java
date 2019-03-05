@@ -41,6 +41,10 @@ class SumDemo {
         s3.rev = 10;
         s3.sum = 10;
         s3.val = 10;
+        System.out.println("s3 created");
+        System.out.println("s1.sum: " + s1.sum);
+        System.out.println("s1.sum: " + s1.val);
+        System.out.println("s1.sum: " + s1.rev);
 
         System.out.println("s2.sum: " + s2.sum);
         System.out.println("s2.sum: " + s2.val);

@@ -24,5 +24,6 @@ class AccessDemo {
         int xyz = 10;
         ob.setAlpha(xyz);
         //xyz still 10
+        System.out.println(xyz);
     }
 }

@@ -58,6 +58,8 @@ class VehicleDemo {
         System.out.println("Minivan can carry " + minivan.passengers +
                 " with a range of " + range);
         */
+        double interest = minivan.getInterestRate();
+        System.out.println(interest);
 
         int val = sum(10,12);
 

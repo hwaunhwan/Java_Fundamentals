@@ -43,7 +43,7 @@ class Recursion {
         Factorial f = new Factorial();
 
         f.factR(5);
-        //f.count(5);
+        f.count(5);
 
 
         System.out.println("Factorials using recursive method.");

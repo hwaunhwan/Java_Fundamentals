@@ -21,4 +21,11 @@ class Pwr_10 {
     }
 }
 
+class demoPwr_10 {
+    public static void main(String[] args) {
+        Pwr_10 x = new Pwr_10(4, 2);
+        System.out.println(x.get_pwr());
+    }
+}
+
 

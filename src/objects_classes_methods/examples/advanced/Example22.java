@@ -15,7 +15,7 @@ class LocalClassDemo {
             void show(long val) {
                 long mask = 1;
 
-                // left-shit a 1 into the proper position
+                // left-shift a 1 into the proper position
                 mask <<= numbits-1;
 
                 int spacer = 0;
