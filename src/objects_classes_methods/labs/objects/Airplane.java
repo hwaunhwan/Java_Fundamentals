@@ -1,10 +1,4 @@
 package objects_classes_methods.labs.objects;
-/**
-Following the example in CarExample.java, please use Object Composition to model an Airplane class.
-The Airplane class must be composed of at least 4 other classes (as well as any primitive types you'd like).
-The Airplane class itself should have a fuel capacity (double) variable, as well as a currentFuelLevel variable.
-We'll use these a bit later.
-**/
 
 class AirPlaneExample {
     public static void main(String[] args) {
@@ -13,7 +7,7 @@ class AirPlaneExample {
         Flight flight = new Flight(true);
         Capacity capacity = new Capacity(200);
 
-        Airplane newAirplane = new Airplane(airline, plane, flight, capacity, 500, 500);
+        Airplane newAirplane = new Airplane(airline, plane, flight, capacity, 500.0, 500.0);
 
         System.out.println(newAirplane.toString());
     }
