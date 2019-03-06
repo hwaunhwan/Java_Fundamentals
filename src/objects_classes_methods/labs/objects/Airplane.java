@@ -1,5 +1,5 @@
 package objects_classes_methods.labs.objects;
-
+// Exercise_01 & Exercise_04
 class AirPlaneExample {
     public static void main(String[] args) {
         Airline airline = new Airline("Southwest");
@@ -97,13 +97,13 @@ class Airplane {
 
     @Override
     public String toString() {
-        return "Airplane{" +
+        return "Airplane{\n" +
                 "airline=" + airline +
-                ", plane=" + plane +
-                ", flight=" + flight +
-                ", capacity=" + capacity +
-                ", fuelCapacity=" + fuelCapacity +
-                ", currentFuelLevel=" + currentFuelLevel +
+                ", \nplane=" + plane +
+                ", \nflight=" + flight +
+                ", \ncapacity=" + capacity +
+                ", \nfuelCapacity=" + fuelCapacity +
+                ", \ncurrentFuelLevel=" + currentFuelLevel +
                 '}';
     }
 }
