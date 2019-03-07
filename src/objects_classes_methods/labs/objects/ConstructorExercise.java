@@ -33,6 +33,7 @@ class Test {
 
     @Override
     public String toString() {
+        super.toString();
         return "Test{" +
                 "score=" + score +
                 ", subject='" + subject + '\'' +

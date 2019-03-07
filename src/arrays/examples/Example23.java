@@ -10,7 +10,8 @@ class Phone {
                 { "Rachel", "555-1400" }
         };
         int i;
-
+        args = new String[1];
+        args[0] = "Tom";
         if(args.length != 1)
             System.out.println("Usage: java Phone <name>");
         else {
