@@ -7,7 +7,7 @@ This project contains a variety of textbook examples and labs focused on Java la
 To get started with this project please follow these instructions:
 ```
 1) If you have not already installed Git - please do so: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-2) $ git clone https://github.com/codingnomads/online-java-fundamentals.git
+2) $ git clone https://github.com/practice/online-java-fundamentals.git
 3) Open IntelliJ IDE and choose "Import Project" or "New" -> "Project From Existing Sources"
 4) Navigate to the root folder of the project you just cloned. You should see the "src" folder and the README.md
 5) Click "Open"
