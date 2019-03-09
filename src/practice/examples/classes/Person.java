@@ -5,7 +5,7 @@ package practice.examples.classes;
 public class Person {
 
     // instance variable
-    int age;
+    public int age;
     double height;
     String name;
 
@@ -29,4 +29,15 @@ public class Person {
 
     final double PI = 3.14;
     // only final has all caps
+
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "age=" + age +
+                ", height=" + height +
+                ", name='" + name + '\'' +
+                ", PI=" + PI +
+                '}';
+    }
 }

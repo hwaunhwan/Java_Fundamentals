@@ -3,8 +3,7 @@ package practice.examples.methods;
 public class MathController {
 
     public static void main(String[] args) {
-
-
+        
         // If method is static
 
         //int x = CustomMath.multiply(2,2);
@@ -20,8 +19,14 @@ public class MathController {
         int x = obj.multiply(a, b);
         int y = obj.divide(4,2);
 
+        //testing overloading
+        double c = 12.34;
+        double d = 45.67;
+        double z = obj.multiply(c, d);
+
         System.out.println(x);
         System.out.println(y);
+        System.out.println(z);
 
     }
 
