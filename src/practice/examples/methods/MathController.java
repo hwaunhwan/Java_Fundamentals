@@ -3,7 +3,7 @@ package practice.examples.methods;
 public class MathController {
 
     public static void main(String[] args) {
-        
+
         // If method is static
 
         //int x = CustomMath.multiply(2,2);
