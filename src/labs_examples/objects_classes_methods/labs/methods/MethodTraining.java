@@ -7,6 +7,7 @@ public class MethodTraining {
     public static void main(String[] args) {
         int a = multiply(2,3);
         int b = multiply(2,3, 4);
+        //double x = Math.PI;
 
         System.out.println("original a = " + a);
         System.out.println("original b = " + b);
@@ -32,8 +33,11 @@ public class MethodTraining {
         newArrayList = arrayList(20, 2,7);
         System.out.println("ArrayList with divisors count: " + newArrayList.size());
         System.out.println("Original array: " + Arrays.toString(nums));
-        reverseArray(nums, 0, nums.length-1);
-        System.out.println("Reversed array: " + Arrays.toString(nums));
+        //reverseArrayRecursive(nums, 0, nums.length-1);
+        //System.out.println("Reversed array: " + Arrays.toString(nums));
+
+        nums = reverseArray(nums);
+        System.out.println(Arrays.toString(nums));
     }
 
     //overloading
@@ -145,15 +149,31 @@ public class MethodTraining {
     }
 
 
-//https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/
-    static void reverseArray(int[] arr, int start, int end){
+//    https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/
+
+//    Write a method that will reverse an array in place use only one extra temp variable. For this exercise you cannot
+//    instantiate a second array. You must reverse the array in place using only one extra temp variable. Hint: this
+//    variable is used to temporarily store individual values in the array
+
+    static void reverseArrayRecursive(int[] arr, int start, int end){
         int temp;
         if (start >= end)
             return;
         temp = arr[start];
         arr[start] = arr[end];
         arr[end] = temp;
-        reverseArray(arr, start+1, end-1);
+        reverseArrayRecursive(arr, start+1, end-1);
+    }
+
+    static int[] reverseArray(int[] arr){
+        int temp;
+        // if I don't divide it by 2, it will un-reverse it.
+        for (int i = 0; i < arr.length/2; i++){
+            temp = arr[i];
+            arr[i] = arr[arr.length-1-i];
+            arr[arr.length-1-i] = temp;
+        }
+        return arr;
     }
 }
 
