@@ -5,6 +5,7 @@ public class Vehicle {
     protected String make;
     protected String model;
     protected double miles;
+    public final double PI = 3.1417;
 
 //    public Vehicle() {
 //    }
@@ -14,6 +15,11 @@ public class Vehicle {
         this.model = model;
         this.miles = miles;
     }
+
+    public final void accelerate(double mph){
+        System.out.println("vehicle accerlerating");
+    }
+
 
     public String getMake() {
         return make;
