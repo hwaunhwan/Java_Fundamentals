@@ -22,6 +22,7 @@ public class CarController {
         System.out.println(100);
         System.out.println("100");
         System.out.println(100.00);
+        moto.demonstrate();
 
 
 

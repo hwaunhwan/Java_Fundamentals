@@ -11,12 +11,16 @@ public class MotorCycle extends Vehicle {
         this.cc = cc;
         this.twoSeat = twoSeat;
     }
+    public void demonstrate(){
+        this.accelerate(10);
+        super.accelerate(10);
+    }
 
     //use @override to prevent errors
-//    @Override
-//    public void accelerate(double mph){
-//        System.out.println("motorcycle accelerating");
-//    }
+    @Override
+    public void accelerate(double mph){
+        System.out.println("motorcycle accelerating");
+    }
 
     public int getCc() {
         return cc;

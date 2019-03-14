@@ -16,10 +16,13 @@ public class Vehicle {
         this.miles = miles;
     }
 
-    public final void accelerate(double mph){
+//    public final void accelerate(double mph){
+//        System.out.println("vehicle accerlerating");
+//    }
+
+    public void accelerate(double mph){
         System.out.println("vehicle accerlerating");
     }
-
 
     public String getMake() {
         return make;
