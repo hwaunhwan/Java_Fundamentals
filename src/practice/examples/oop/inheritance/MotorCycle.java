@@ -16,6 +16,11 @@ public class MotorCycle extends Vehicle {
         super.accelerate(10);
     }
 
+    @Override
+    public void stop() {
+        System.out.println("stopping moto");
+    }
+
     //use @override to prevent errors
     @Override
     public void accelerate(double mph){

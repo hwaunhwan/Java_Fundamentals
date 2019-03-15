@@ -1,5 +1,7 @@
 package practice.examples.oop.inheritance;
 
+import practice.examples.oop.polymorphism.Scooter;
+
 public class CarController {
 
     public static void main(String[] args) {
@@ -24,7 +26,18 @@ public class CarController {
         System.out.println(100.00);
         moto.demonstrate();
 
+        Scooter motorScooter = new Scooter();
 
+        moto.start();
+        motorScooter.start();
+
+        moto.accelerate(100);
+        motorScooter.accelerate(100);
+
+        truck.stop();
+        sedan.stop();
+        moto.stop();
+        motorScooter.stop();
 
     }
 }

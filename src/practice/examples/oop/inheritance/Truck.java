@@ -9,6 +9,11 @@ public class Truck extends Vehicle {
         this.bedCapacity = bedCapacity;
     }
 
+    @Override
+    public void stop() {
+        System.out.println("stopping truck");
+    }
+
     public double getBedCapacity() {
         return bedCapacity;
     }

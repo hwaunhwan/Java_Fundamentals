@@ -1,6 +1,8 @@
 package practice.examples.oop.inheritance;
 
-public class Vehicle {
+import practice.examples.oop.polymorphism.MotorizedTransport;
+
+public abstract class Vehicle implements MotorizedTransport {
 
     protected String make;
     protected String model;
@@ -20,8 +22,29 @@ public class Vehicle {
 //        System.out.println("vehicle accerlerating");
 //    }
 
-    public void accelerate(double mph){
-        System.out.println("vehicle accerlerating");
+//interface example
+
+
+    @Override
+    public boolean start() {
+        System.out.println("starting vehicle");
+        return true;
+    }
+
+//    Commenting out stop() will require this class to be abstract
+//    @Override
+//    public void stop() {
+//        System.out.println("stopping vehicle");
+//    }
+
+    @Override
+    public void accelerate(double mph) {
+        System.out.println("accelerating vehicle by " + mph);
+    }
+
+    @Override
+    public void decelerate(double mph) {
+        System.out.println("decelerating vehicle by " + mph);
     }
 
     public String getMake() {

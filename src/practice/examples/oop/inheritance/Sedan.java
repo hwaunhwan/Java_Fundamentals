@@ -9,6 +9,11 @@ public class Sedan extends Vehicle {
         this.trunkCapacity = trunkCapacity;
     }
 
+    @Override
+    public void stop() {
+        System.out.println("stopping Sedan");
+    }
+
     public double getTrunkCapacity() {
         return trunkCapacity;
     }
