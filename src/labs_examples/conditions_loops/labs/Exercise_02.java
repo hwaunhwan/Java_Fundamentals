@@ -13,8 +13,7 @@ import java.util.Scanner;
 public class Exercise_02 {
 
     public static void main(String[] args) {
-
-        // 1) create scanner
+        // 1) create scanner (don't forget to import Scanner!)
         Scanner scanner = new Scanner(System.in);
         // 2) prompt user
         System.out.print("Please enter a number between 1 and 7 to see the corresponding day of the week: ");
