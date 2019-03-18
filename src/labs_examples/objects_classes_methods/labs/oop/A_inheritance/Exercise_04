@@ -1,6 +1,6 @@
 
 Without running the code below, please tell me what it will print.
-
+"Child Called" will print because doSomething() method was overriden in Child class
 
 
 public class InheritanceTest

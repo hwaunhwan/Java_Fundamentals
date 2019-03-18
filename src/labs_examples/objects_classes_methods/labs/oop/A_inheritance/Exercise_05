@@ -1,6 +1,8 @@
 
 Without running the code below, please tell me what will print. Why?
-
+Parent called
+Child called
+Because both default constructors are called when the object c was instantiated in the parent then child order.
 
 
 

@@ -3,7 +3,8 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 /**
  * Why does the output print in the order it does?
  *
- * You answer:
+ * You answer: A_1 then B_1 then C_1 because all default constructors were used
+ * and the jvm thinks all constructors need to be called
  *
  */
 
