@@ -1,7 +1,5 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
-import java.util.Arrays;
-
 public class Card {
     private char[] suit = new char[]{'♠', '♦', '♥', '♣'};
     private int cardValue;
@@ -14,27 +12,41 @@ public class Card {
 
     public Card(){}
 
-    public char[] getSuit() {
-        return suit;
+
+    public String getCardName(){
+        switch (cardValue) {
+            case 1:
+                return "Ace";
+            case 11:
+                return "Jack";
+            case 12:
+                return "Queen";
+            case 13:
+                return "King";
+            default:
+                return Integer.toString(cardValue);
+        }
     }
 
-    public void setSuit(char[] suit) {
-        this.suit = suit;
-    }
-
-    public int getCardValue() {
-        return cardValue;
-    }
-
-    public void setCardValue(int cardValue) {
-        this.cardValue = cardValue;
+    public int getCardValue(){
+        switch (cardValue) {
+//            case 1:
+//                return 1;
+            case 11:
+                return 10;
+            case 12:
+                return 10;
+            case 13:
+                return 10;
+            default:
+                return cardValue;
+        }
     }
 
     @Override
     public String toString() {
-        return "Card{" +
+        return "Card{cardSuit=" + cardSuit +
                 ", cardValue=" + cardValue +
-                ", cardSuit=" + cardSuit +
                 '}';
     }
 }
