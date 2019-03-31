@@ -11,6 +11,7 @@ public class Deck {
     }
 
     public void populateDeck(){
+        usedCards = new ArrayList<Integer>();
         this.cards = new Card[52];
         int c = 0;
         String x;
@@ -20,22 +21,24 @@ public class Deck {
                 cards[c] = new Card(i, j);
                 c++;
             }
-
         }
     }
 
     public void dealCard(Player player){
         Random r = new Random();
         int x = r.nextInt(53);
-        while (usedCards.contains(x)){
-            x = r.nextInt(53);
+        while (usedCards.contains(x)) {
+             x = r.nextInt(53);
         }
         usedCards.add(x);
         player.getHand().getCards().add(cards[x]);
     }
 
     public void shuffle(){
-        usedCards.clear();
+        if (usedCards != null){
+            usedCards.clear();
+            System.out.println("test");
+        }
     }
 
 }

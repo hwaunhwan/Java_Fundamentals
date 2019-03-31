@@ -1,12 +1,13 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
 public class Player {
-    public String name;
-    public Hand hand;
-    public int potValue;
+    private String name;
+    private Hand hand;
+    private int potValue;
 
     public Player(String name) {
         this.name = name;
+        this.hand = new Hand();
     }
 
     public Player(String name, Hand hand, int potValue) {
