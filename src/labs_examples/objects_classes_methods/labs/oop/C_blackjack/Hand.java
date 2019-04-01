@@ -13,6 +13,19 @@ public class Hand {
         return cards;
     }
 
+    public void showAllCards(){
+        for(Card c : cards){
+            System.out.println(c.getCardName() + " of " + c.getCardSuit());
+        }
+    }
+
+    public void showFirstCards(){
+        for(Card c : cards){
+            System.out.println(c.getCardName() + " of " + c.getCardSuit());
+            break;
+        }
+    }
+
     public int getHandValue() {
         int value = 0;
         for (Card c : cards) {

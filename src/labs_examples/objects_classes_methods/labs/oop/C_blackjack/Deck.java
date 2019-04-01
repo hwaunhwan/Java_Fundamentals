@@ -26,9 +26,9 @@ public class Deck {
 
     public void dealCard(Player player){
         Random r = new Random();
-        int x = r.nextInt(53);
+        int x = r.nextInt(52);
         while (usedCards.contains(x)) {
-             x = r.nextInt(53);
+             x = r.nextInt(52);
         }
         usedCards.add(x);
         player.getHand().getCards().add(cards[x]);

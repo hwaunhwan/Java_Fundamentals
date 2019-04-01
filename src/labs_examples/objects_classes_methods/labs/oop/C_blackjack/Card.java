@@ -28,6 +28,10 @@ public class Card {
         }
     }
 
+    public char getCardSuit() {
+        return cardSuit;
+    }
+
     public int getCardValue(){
         switch (cardValue) {
 //            case 1:
