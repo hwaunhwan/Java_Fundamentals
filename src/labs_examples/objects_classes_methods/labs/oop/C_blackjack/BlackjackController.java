@@ -16,6 +16,8 @@ public class BlackjackController {
         Player player = new Player(playerName);
         Player dealer = new Player("Dealer");
         Deck deck = new Deck();
+        boolean playerContinue = true;
+        boolean dealerContinue = true;
 
         // Deal two cards to each player
         deck.dealCard(player);
@@ -23,68 +25,82 @@ public class BlackjackController {
         deck.dealCard(player);
         deck.dealCard(dealer);
 
-        // Show two cards of the player and one card of the dealer
-        System.out.println(playerName + "'s Hands: ");
-        player.getHand().showAllCards();
-        System.out.println();
-        System.out.println(playerName + "'s Current Score: " + player.getHand().getHandValue());
+        printPlayerHand(player);
 
         System.out.println("\nDealer's Hands: ");
         dealer.getHand().showFirstCards();
 
-        // Check if the player hit blackjack with first two cards
-        if (player.getHand().getHandValue() == 21) {
-            if (dealer.getHand().getHandValue() == 21) {
-                System.out.println("Blackjack! You both won!");
+        // Ask user / dealer if they want
+        // until both says no or both bust
+        do {
+            if (playerContinue && wantsCard(player)) {
+                deck.dealCard(player);
+                printPlayerHand(player);
             } else {
-                System.out.println("Blackjack! " + playerName + " won!");
+                playerContinue = false;
             }
-        } else if (dealer.getHand().getHandValue() == 21){
-            System.out.println(playerName + " lost! The dealer hit Blackjack!");
+
+            if (dealerContinue && wantsCard(dealer)) {
+                deck.dealCard(dealer);
+                System.out.println("Dealer took another card");
+            } else {
+                dealerContinue = false;
+                System.out.println("Dealer didn't take another card");
+            }
+
+        } while (playerContinue || dealerContinue);
+
+        determineWinner(player, dealer);
+
+    }
+
+    private static void determineWinner(Player player, Player dealer) {
+
+        if (player.getHand().isGreaterThan21() && dealer.getHand().isGreaterThan21()){
+            System.out.println("Both bust");
+        } else if (player.getHand().isGreaterThan21() && dealer.getHand().isLessThan21()){
+            System.out.println("Player bust, Dealer wins");
+        } else if (player.getHand().isLessThan21() && dealer.getHand().isGreaterThan21()){
+            System.out.println("Dealer bust, Player wins");
         } else {
-            // When both players have cards value below 21
-            String anotherCard = "y";
-            while (player.getHand().getHandValue() < 21 && anotherCard.equalsIgnoreCase("y")) {
-                do {
-                    System.out.println("\nWould you like to receive another card? (Y/N)");
-                    anotherCard = scanner.next();
-                } while (!(anotherCard.equalsIgnoreCase("y") ||
-                        anotherCard.equalsIgnoreCase("n")));
-
-                // Player doesn't want anymore card
-                if (anotherCard.equalsIgnoreCase("n")) {
-                    System.out.println();
-                    System.out.println(playerName + "'s Final Score: " + player.getHand().getHandValue());
-
-                } else {
-                    deck.dealCard(player);
-                    System.out.println(playerName + "'s Current Hands: ");
-                    player.getHand().showAllCards();
-                    System.out.println();
-                    System.out.println(playerName + "'s Current Score: " + player.getHand().getHandValue());
-                }
-
-                while (dealer.computerWantsCard()) {
-                    deck.dealCard(dealer);
-                    System.out.println("\nDealer took another card");
-                }
-                System.out.println("\nDealer did not take another card");
-                System.out.println("Dealer's Final Score: " + dealer.getHand().getHandValue());
-            }
-
-            if (player.getHand().getHandValue() > 21) {
-                System.out.println(playerName + " lost!");
-            }
-            if (dealer.getHand().getHandValue() > 21) {
-                System.out.println("Dealer lost!");
-            }
-            if (player.getHand().getHandValue() > dealer.getHand().getHandValue()) {
-                System.out.println(playerName + " won!");
-            } else if (player.getHand().getHandValue() == dealer.getHand().getHandValue()){
-                System.out.println("Tie game!");
+            if(player.getHand().getHandValue() > dealer.getHand().getHandValue()){
+                System.out.println("Player wins");
             } else {
-                System.out.println("Dealer won!");
+                System.out.println("Dealer wins");
             }
         }
+
+        printPlayerHand(player);
+        printPlayerHand(dealer);
     }
+
+    private static boolean wantsCard(Player player) {
+
+        if(player.getName().equalsIgnoreCase("Dealer")){
+            return player.computerWantsCard();
+        }
+
+        if(player.getHand().isGreaterThan21()){
+            System.out.println("You busted");
+            return false;
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Would you like another card? (Y/N)");
+        String response = scanner.next();
+        if (response.equalsIgnoreCase("y")){
+            return true;
+        }
+        return false;
+    }
+
+    private static void printPlayerHand(Player player){
+        // Show two cards of the player and one card of the dealer
+        System.out.println(player.getName() + "'s Hands: ");
+        player.getHand().showAllCards();
+        System.out.println();
+        System.out.println(player.getName() + "'s Current Score: " + player.getHand().getHandValue());
+    }
+
+
 }

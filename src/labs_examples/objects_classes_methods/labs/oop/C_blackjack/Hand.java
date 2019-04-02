@@ -15,15 +15,13 @@ public class Hand {
 
     public void showAllCards(){
         for(Card c : cards){
-            System.out.println(c.getCardName() + " of " + c.getCardSuit());
+            System.out.print(c.getCardName() + " of " + c.getCardSuit() + " | ");
         }
     }
 
     public void showFirstCards(){
-        for(Card c : cards){
-            System.out.println(c.getCardName() + " of " + c.getCardSuit());
-            break;
-        }
+        System.out.println(cards.get(0).getCardName() + " of " + cards.get(0).getCardSuit());
+        System.out.println("Second card face down");
     }
 
     public int getHandValue() {
@@ -36,6 +34,13 @@ public class Hand {
 
     public boolean isGreaterThan21() {
         if(getHandValue() > 21){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isLessThan21() {
+        if(getHandValue() < 21){
             return true;
         }
         return false;
