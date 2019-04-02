@@ -4,9 +4,12 @@ public class Player {
     private String name;
     private Hand hand;
     private int potValue;
+    private int currentBet;
 
     public Player(String name) {
         this.name = name;
+        this.potValue = 100;
+        this.currentBet = 0;
         this.hand = new Hand();
     }
 
@@ -14,10 +17,15 @@ public class Player {
         this.name = name;
         this.hand = hand;
         this.potValue = potValue;
+        this.hand = new Hand();
     }
 
     public String getName() {
         return name;
+    }
+
+    public int getPotValue() {
+        return potValue;
     }
 
     public void setName(String name) {
@@ -26,18 +34,6 @@ public class Player {
 
     public Hand getHand() {
         return hand;
-    }
-
-    public void setHand(Hand hand) {
-        this.hand = hand;
-    }
-
-    public int getPotValue() {
-        return potValue;
-    }
-
-    public void setPotValue(int potValue) {
-        this.potValue = potValue;
     }
 
     public boolean computerWantsCard(){

@@ -26,32 +26,42 @@ public class BlackjackController {
         deck.dealCard(dealer);
 
         printPlayerHand(player);
-
+        printPotValue(player);
         System.out.println("\nDealer's Hands: ");
         dealer.getHand().showFirstCards();
+        boolean playAnotherGame = true;
 
         // Ask user / dealer if they want
         // until both says no or both bust
-        do {
-            if (playerContinue && wantsCard(player)) {
-                deck.dealCard(player);
-                printPlayerHand(player);
+        while (playAnotherGame) {
+            do {
+                if (playerContinue && wantsCard(player)) {
+                    deck.dealCard(player);
+                    printPlayerHand(player);
+                } else {
+                    playerContinue = false;
+                }
+
+                if (dealerContinue && wantsCard(dealer)) {
+                    deck.dealCard(dealer);
+                    System.out.println("Dealer took another card");
+                } else {
+                    dealerContinue = false;
+                    System.out.println("Dealer didn't take another card");
+                }
+
+            } while (playerContinue || dealerContinue);
+
+            determineWinner(player, dealer);
+            System.out.println("Would you like to play another game? (Y/N)");
+            String newResponse = scanner.next();
+            if(newResponse.equalsIgnoreCase("y")){
+                playAnotherGame = true;
+                deck.shuffle();
             } else {
-                playerContinue = false;
+                playAnotherGame = false;
             }
-
-            if (dealerContinue && wantsCard(dealer)) {
-                deck.dealCard(dealer);
-                System.out.println("Dealer took another card");
-            } else {
-                dealerContinue = false;
-                System.out.println("Dealer didn't take another card");
-            }
-
-        } while (playerContinue || dealerContinue);
-
-        determineWinner(player, dealer);
-
+        }
     }
 
     private static void determineWinner(Player player, Player dealer) {
@@ -100,6 +110,10 @@ public class BlackjackController {
         player.getHand().showAllCards();
         System.out.println();
         System.out.println(player.getName() + "'s Current Score: " + player.getHand().getHandValue());
+    }
+
+    private static void printPotValue(Player player){
+        System.out.println(player.getName() + "'s Pot: $"+player.getPotValue());
     }
 
 
