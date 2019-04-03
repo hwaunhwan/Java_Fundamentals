@@ -15,12 +15,12 @@ public class Hand {
 
     public void showAllCards(){
         for(Card c : cards){
-            System.out.print(c.getCardName() + " of " + c.getCardSuit() + " | ");
+            System.out.print("| " + c.getCardName() + " of " + c.getCardSuit() + " | ");
         }
     }
 
     public void showFirstCards(){
-        System.out.println(cards.get(0).getCardName() + " of " + cards.get(0).getCardSuit());
+        System.out.println("| " + cards.get(0).getCardName() + " of " + cards.get(0).getCardSuit() + " | ");
         System.out.println("Second card face down");
     }
 

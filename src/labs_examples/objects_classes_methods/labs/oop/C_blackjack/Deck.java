@@ -37,7 +37,7 @@ public class Deck {
     public void shuffle(){
         if (usedCards != null){
             usedCards.clear();
-            System.out.println("test");
+            System.out.println("\nShuffle cards. New deck is ready!");
         }
     }
 

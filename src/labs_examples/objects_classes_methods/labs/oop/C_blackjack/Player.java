@@ -28,12 +28,20 @@ public class Player {
         return potValue;
     }
 
+    public void setPotValue(int potValue) {
+        this.potValue = potValue;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
     public Hand getHand() {
         return hand;
+    }
+
+    public void clearHands(){
+        this.hand = new Hand();
     }
 
     public boolean computerWantsCard(){
