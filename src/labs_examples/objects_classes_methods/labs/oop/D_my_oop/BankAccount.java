@@ -3,8 +3,11 @@ package labs_examples.objects_classes_methods.labs.oop.D_my_oop;
 public class BankAccount {
 
 //    private String accountHolderName;
-    private String accountNumber;
     private int currentBalance;
+
+    public BankAccount(int currentBalance) {
+        this.currentBalance = currentBalance;
+    }
 
     public int deposit(int amount){
         if (amount > 0) {
@@ -17,12 +20,16 @@ public class BankAccount {
 
     public void withdraw(int amount){
         if (amount > 0) {
-            this.currentBalance = currentBalance + amount;
+            if(amount > currentBalance) {
+                this.currentBalance = currentBalance - amount;
+            }
         }
     }
 
     public int checkBalance(){
         return currentBalance;
     }
+
+
 
 }
