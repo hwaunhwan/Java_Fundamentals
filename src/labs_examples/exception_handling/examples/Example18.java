@@ -16,7 +16,7 @@ class FixedQueue implements ICharQ {
         putloc = getloc = 0;
     }
 
-    // Put a characer into the queue.
+    // Put a character into the queue.
     synchronized public void put(char ch) throws QueueFullException {
 
         if(putloc==q.length)

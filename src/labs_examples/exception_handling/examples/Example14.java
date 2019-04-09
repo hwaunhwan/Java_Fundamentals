@@ -1,7 +1,7 @@
 package labs_examples.exception_handling.examples;
 
 // Use the multi-catch feature.  Note: This code requires JDK 7 or
-// later to compiler.
+// later to compile.
 class MultiCatch {
     public static void main(String args[]) {
         int a=88, b=0;
