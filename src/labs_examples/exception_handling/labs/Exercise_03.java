@@ -1,5 +1,7 @@
 package labs_examples.exception_handling.labs;
 
+import java.util.logging.Logger;
+
 /**
  * Exception Handling Exercise 3:
  *
@@ -8,11 +10,16 @@ package labs_examples.exception_handling.labs;
  */
 
 class Exercise_03{
+    final static Logger logger = Logger.getLogger(String.valueOf(Exercise_03.class));
+
     public static void main(String[] args) {
         for(int i=0; i < 4; i++) {
             finallyDemo.genException(i);
             System.out.println();
+            logger.info("forloop");
         }
+        logger.warning("Method ending");
+        logger.severe("Error");
     }
 }
 
@@ -27,7 +34,7 @@ class finallyDemo{
             result = test[i] / test1[i];
             System.out.println(result);
         } catch (ArithmeticException | ArrayIndexOutOfBoundsException exc) {
-            System.out.println(exc.getMessage());
+            exc.printStackTrace();
         } finally {
             System.out.println("printing from finally");
         }

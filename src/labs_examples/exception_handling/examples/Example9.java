@@ -16,6 +16,7 @@ class ThrowDemo {
             int x = testThrow();
         } catch (ArithmeticException ae){
             throw ae;
+//            System.out.println(ae.getMessage());
         }
 
         System.out.println("After try/catch block.");
@@ -23,7 +24,7 @@ class ThrowDemo {
 
     public static int testThrow() throws ArithmeticException{
 
-        throw new ArithmeticException();
+        throw new ArithmeticException("Message");
 
     }
 }
