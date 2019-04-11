@@ -9,3 +9,6 @@ package labs_examples.input_output.labs;
  *
  */
 
+class Exercise_01 {
+
+}
