@@ -9,6 +9,9 @@ package labs_examples.input_output.labs;
  *
  */
 
-class Exercise_01 {
+public class Exercise_01 {
+    public static void main(String[] args) {
+        
+    }
 
 }
