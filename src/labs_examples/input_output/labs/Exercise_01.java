@@ -11,17 +11,19 @@ import java.io.IOException;
  *
  */
 
-public class Exercise_01 {
-    public static void main(String[] args) throws IOException {
+class Example {
+    public static void main(String[] args) {
 
-        byte data[] = new byte[11];
+        int[] vals = {1,2,3,4,5};
 
-        System.out.println("Enter some characters.");
+        for(int i = 0; i < vals.length/2; ++i){
+            int temp = vals[i];
+            vals[i] = vals[vals.length - 1 -i];
+            vals[vals.length - 1 -i] = temp;
+        }
 
-        System.in.read(data);
-
-        System.out.print("You entered: ");
-        for(int i=0; i < data.length; i++)
-            System.out.print((char) data[i]);
+        for(int i : vals){
+            System.out.println(i);
+        }
     }
 }
